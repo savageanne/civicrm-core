@@ -918,7 +918,8 @@ class CRM_Core_BAO_UFGroup extends CRM_Core_DAO_UFGroup {
     $websiteTypes  = CRM_Core_PseudoConstant::get('CRM_Core_DAO_Website', 'website_type_id');
 
     $multipleFields = array('url');
-    $nullIndex = $nullValueIndex = ' ';
+    // simple fix for CRM-13287
+    $nullIndex = $nullValueIndex = '';
 
     //start of code to set the default values
     foreach ($fields as $name => $field) {
